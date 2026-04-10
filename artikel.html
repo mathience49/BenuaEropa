@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Artikel - Benua Eropa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5efe6;
+      animation: fadeIn 1s ease;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 30px;
+      border-bottom: 2px solid black;
+      background-color: #e3d6b8;
+    }
+
+    .nav-left {
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .nav-left:hover {
+      transform: translateX(-5px);
+      text-decoration: underline;
+    }
+
+    .nav-right a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .nav-right a:hover {
+      text-decoration: underline;
+    }
+
+    /* CONTAINER */
+    .container {
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    /* TITLE */
+    .title {
+      border: 2px solid black;
+      border-radius: 15px;
+      padding: 15px;
+      text-align: center;
+      margin-bottom: 25px;
+      background-color: #eae5dd;
+      animation: slideDown 1s ease;
+    }
+
+    .title h1 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+    }
+
+    /* CONTENT */
+    .content {
+      border: 2px solid black;
+      border-radius: 15px;
+      padding: 25px;
+      line-height: 1.8;
+      background-color: #faf4f4;
+      animation: fadeUp 1s ease;
+    }
+
+    .content p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    /* ANIMASI */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="nav-left" onclick="history.back()">←Kembali</div>
+    <div class="nav-right">
+      <a href="index.html">Home</a>
+      <a href="topik.html">Penjelajahan</a>
+    </div>
+  </div>
+
+  <!-- ISI -->
+  <div class="container">
+
+    <!-- JUDUL DINAMIS -->
+    <div class="title">
+      <h1 id="judul">Judul</h1>
+    </div>
+
+    <!-- ISI ARTIKEL -->
+    <div class="content" id="isi">
+      <p>Memuat konten...</p>
+    </div>
+
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const topik = params.get("topik");
+
+    const judul = document.getElementById("judul");
+    const isi = document.getElementById("isi");
+
+    if (topik === "bentang") {
+      judul.innerText = "Bentang Alam Benua Eropa";
+      isi.innerHTML = `
+        <p>Benua Eropa memiliki bentang alam yang cukup beragam meskipun ukurannya tidak terlalu besar. Wilayahnya terdiri dari pegunungan, dataran, laut, serta pantai yang luas. Kondisi alam ini juga memengaruhi iklim, tumbuhan, dan hewan yang hidup di dalamnya.</p>
+        <p>🏔️ Pegunungan Di bagian selatan Eropa terdapat banyak pegunungan besar yang membentang panjang. Salah satu yang paling terkenal adalah Pegunungan Alpen yang menjadi pegunungan tertinggi di Eropa Barat. Selain itu ada Pegunungan Pyrenees yang menjadi batas alami antara Spanyol dan Prancis, serta Pegunungan Carpathia di Eropa Tengah dan Timur. Pegunungan di Eropa umumnya tergolong tua dan tidak terlalu aktif.</p>
+        <p>🌊 Laut dan Pantai
+Eropa dikelilingi oleh berbagai laut dan samudra, seperti Samudra Atlantik di bagian barat dan Laut Mediterania di bagian selatan. Banyaknya perairan ini menyebabkan garis pantai Eropa sangat panjang dan berlekuk-lekuk.
+Ciri pantai di Eropa: Banyak teluk dan semenanjung, Ada pantai bertebing (di Inggris), Ada pantai berpasir (di Spanyol dan Italia).</p>
+        <p>🌦️ Cuaca dan Iklim
+Secara umum, Eropa memiliki iklim sedang sehingga tidak terlalu panas maupun terlalu dingin. Iklim ini dipengaruhi oleh arus laut hangat dari Atlantik.
+Jenis iklim di Eropa: Iklim laut (sejuk dan lembap) di Eropa Barat, Iklim kontinental (perbedaan musim jelas) di Eropa Timur, Iklim Mediterania (panas kering, dingin sejuk) di selatan.<p>
+        <p>🌱 Flora (Tumbuhan)
+Tumbuhan di Eropa cukup beragam karena perbedaan iklim di tiap wilayah. Di daerah beriklim sedang banyak ditemukan hutan gugur, yaitu hutan yang daunnya rontok saat musim dingin. Di wilayah yang lebih dingin terdapat hutan konifer seperti pinus dan cemara, sedangkan di selatan terdapat vegetasi khas Mediterania berupa semak-semak.
+<p>
+        <p>🐿️ Fauna (Hewan)
+Hewan di Eropa menyesuaikan dengan kondisi lingkungannya. Di hutan dan pegunungan dapat ditemukan rusa, beruang, serigala, dan rubah. Sementara itu, di wilayah utara yang lebih dingin terdapat hewan seperti rusa kutub.<p>
+        <p>🌍 Kesimpulan
+Secara keseluruhan, bentang alam Eropa sangat beragam, mulai dari pegunungan, laut, hingga hutan. Kondisi alam ini membuat Eropa memiliki iklim yang relatif nyaman serta mendukung kehidupan manusia, tumbuhan, dan hewan.<p>
+      `;
+    }
+
+    else if (topik === "penduduk") {
+      judul.innerText = "Kondisi Penduduk dan Budaya Eropa";
+      isi.innerHTML = `
+        <p>Penduduk Benua Eropa pada tahun 2026 diperkirakan berjumlah lebih dari 740 juta jiwa, dengan tingkat pertumbuhan yang sangat rendah. Beberapa negara dengan jumlah penduduk terbesar antara lain Jerman, Prancis, dan Italia. Rendahnya angka kelahiran serta tingginya angka harapan hidup menyebabkan pertumbuhan penduduk cenderung stagnan, bahkan di beberapa negara mengalami penurunan.
+Persebaran penduduk di Eropa tidak merata dan cenderung terkonsentrasi di wilayah yang lebih maju secara ekonomi. Kawasan Eropa Barat dan Tengah menjadi wilayah dengan kepadatan tinggi karena banyaknya industri dan kota besar. Kota-kota seperti London, Paris, dan Berlin menjadi pusat aktivitas penduduk, sedangkan wilayah Eropa Utara yang beriklim dingin serta sebagian Eropa Timur memiliki kepadatan yang lebih rendah.
+Rata-rata usia penduduk di Eropa tergolong tinggi, yaitu sekitar 42–45 tahun pada tahun 2026. Hal ini menunjukkan adanya fenomena penuaan penduduk, di mana jumlah lansia lebih banyak dibandingkan usia muda. Kondisi ini dipengaruhi oleh rendahnya angka kelahiran, pola hidup modern, serta kemajuan di bidang kesehatan. Dampaknya, beberapa negara menghadapi tantangan dalam penyediaan tenaga kerja dan pembiayaan jaminan sosial di masa depan.</p>
+        <p>Dari segi budaya, Eropa dikenal sangat beragam karena terdiri dari banyak negara dengan latar belakang sejarah yang panjang. Budaya Eropa dipengaruhi oleh peradaban kuno seperti Yunani dan Romawi, yang membentuk dasar seni, arsitektur, dan sistem hukum modern. Setiap negara memiliki budaya khas yang berbeda, sehingga menciptakan kekayaan budaya yang sangat luas di kawasan ini.
+Contoh budaya di Eropa dapat dilihat dari berbagai tradisi dan kebiasaan masyarakatnya. Misalnya, Oktoberfest di Jerman yang terkenal dengan perayaan dan budaya minum bir, serta La Tomatina di Spanyol yang merupakan festival lempar tomat. Selain itu, ada juga tradisi minum teh di Inggris yang menjadi bagian dari kehidupan sehari-hari masyarakat.</p>
+        <p>Meskipun berbeda-beda, masyarakat Eropa umumnya memiliki gaya hidup modern, terbuka, dan menghargai kebebasan individu. Interaksi antarnegara yang kuat, terutama melalui Uni Eropa, membuat pertukaran budaya semakin mudah terjadi. Hal ini menjadikan Eropa sebagai kawasan yang tidak hanya maju, tetapi juga kaya akan budaya yang beragam dan tetap terjaga hingga sekarang.</p>
+      `;
+    }
+
+    else if (topik === "politik") {
+      judul.innerText = "Politik dan Ekonomi Eropa";
+      isi.innerHTML = `
+        <p>Politik di Benua Eropa umumnya didominasi oleh sistem demokrasi, di mana negara-negara menerapkan pemerintahan seperti republik dan monarki konstitusional, dengan kekuasaan dijalankan berdasarkan hukum dan partisipasi rakyat. Stabilitas politik di kawasan ini cukup tinggi karena adanya sistem pemerintahan yang kuat, transparansi, serta penghormatan terhadap hak asasi manusia, meskipun tetap ada perbedaan kebijakan dan kepentingan antarnegara. Kerja sama politik dan ekonomi di Eropa sangat berkembang melalui organisasi seperti Uni Eropa, yang menyatukan banyak negara dalam satu sistem kerja sama. Melalui organisasi ini, negara-negara anggota dapat membuat kebijakan bersama, memperkuat hubungan diplomatik, serta menjaga stabilitas kawasan agar tetap aman dan sejahtera.</p>
+        <p>Dalam bidang ekonomi, Eropa termasuk salah satu pusat ekonomi dunia dengan sektor industri, perdagangan, dan jasa yang sangat maju. Banyak negara di Eropa memiliki tingkat pendapatan tinggi dan teknologi yang berkembang pesat, sehingga mampu bersaing secara global. Hubungan ekonomi antarnegara juga sangat erat karena adanya perdagangan bebas yang memudahkan pertukaran barang dan jasa.
+Salah satu bentuk kerja sama ekonomi yang penting adalah penggunaan mata uang bersama, yaitu Euro, yang digunakan oleh beberapa negara anggota Uni Eropa. Penetapan mata uang ini bertujuan untuk mempermudah perdagangan, mengurangi hambatan transaksi, serta memperkuat integrasi ekonomi antarnegara di kawasan Eropa, meskipun tidak semua negara menggunakannya.</p>
+        <p>Secara keseluruhan, politik dan ekonomi di Eropa saling berkaitan erat dalam menciptakan kestabilan dan kemajuan kawasan. Dengan adanya kerja sama yang kuat, sistem pemerintahan yang baik, serta kebijakan ekonomi yang terintegrasi, Eropa mampu menjadi salah satu wilayah yang berpengaruh di dunia, baik dalam bidang politik maupun ekonomi.</p>
+      `;
+    }
+
+    else if (topik === "iptek") {
+      judul.innerText = "Peradaban dan IPTEK Eropa";
+      isi.innerHTML = `
+        <p>Peradaban di Benua Eropa memiliki sejarah panjang yang dimulai sejak masa kuno, terutama dari peradaban Yunani Kuno dan Romawi Kuno. Yunani dikenal sebagai tempat lahirnya filsafat, demokrasi, dan ilmu pengetahuan awal, sementara Romawi berperan besar dalam pengembangan hukum, pemerintahan, dan infrastruktur seperti jalan serta sistem kota. Kedua peradaban ini menjadi dasar penting bagi perkembangan budaya dan ilmu pengetahuan di Eropa hingga saat ini.</p>
+        <p>Memasuki Abad Pertengahan, perkembangan ilmu pengetahuan di Eropa sempat mengalami kemunduran, namun tetap berkembang melalui lembaga keagamaan dan pendidikan. Pada masa ini, gereja memiliki pengaruh besar terhadap kehidupan masyarakat, termasuk dalam bidang ilmu. Meskipun demikian, berbagai universitas mulai berdiri dan menjadi pusat pembelajaran, yang kemudian menjadi fondasi bagi kebangkitan ilmu pengetahuan di masa berikutnya.</p>
+        <p>Perkembangan pesat kembali terjadi pada masa Renaissance, yaitu periode kebangkitan kembali ilmu pengetahuan, seni, dan budaya di Eropa. Pada masa ini, manusia mulai berpikir lebih rasional dan ilmiah, serta tidak hanya bergantung pada ajaran tradisional. Banyak tokoh penting muncul, seperti Leonardo da Vinci dan Galileo Galilei, yang memberikan kontribusi besar dalam seni, sains, dan teknologi.</p>
+        <p>Selanjutnya, pada masa Revolusi Ilmiah, ilmu pengetahuan berkembang sangat pesat melalui metode ilmiah dan eksperimen. Tokoh seperti Isaac Newton dan Albert Einstein menghasilkan teori-teori penting yang menjadi dasar ilmu fisika modern. Penemuan-penemuan ini tidak hanya memengaruhi Eropa, tetapi juga dunia secara keseluruhan.
+Selain itu, Eropa juga mengalami Revolusi Industri yang membawa perubahan besar dalam bidang teknologi dan ekonomi. Munculnya mesin, pabrik, dan sistem produksi modern mempercepat perkembangan ilmu terapan dan inovasi. Hal ini menjadikan Eropa sebagai pusat kemajuan teknologi dan industri pada masanya.<p>
+        <p>Secara keseluruhan, peradaban dan ilmu pengetahuan di Eropa berkembang melalui berbagai tahap penting, mulai dari peradaban kuno hingga era modern. Warisan ilmu dan teknologi yang dihasilkan telah memberikan dampak besar bagi dunia, baik dalam bidang pendidikan, sains, maupun kehidupan sehari-hari, sehingga Eropa dikenal sebagai salah satu pusat perkembangan ilmu pengetahuan global.<p>
+      `;
+    }
+
+  </script>
+
+</body>
+</html>

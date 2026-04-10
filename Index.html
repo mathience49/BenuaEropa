@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>E-Explore Europe</title>
+
+  <!-- FONT (biar elegan) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+  <style>
+    /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #eae5dd;
+  animation: fadeIn 1s ease;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: #9b6b43;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #f3e5c0;
+  transform: translateY(-2px);
+}
+
+/* CONTAINER */
+.container {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* TITLE BOX */
+.title-box {
+  border: 3px solid black;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 700px;
+  animation: slideUp 0.8s ease;
+}
+
+.title-box h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+}
+
+/* CONTENT BOX */
+.content-box {
+  border: 3px solid black;
+  border-radius: 25px;
+  padding: 25px;
+  margin: 30px auto;
+  width: 80%;
+  max-width: 700px;
+  text-align: left;
+  animation: slideUp 1.2s ease;
+}
+
+.content-box p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.content-box ul {
+  margin-left: 20px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 40px;
+  border: 3px solid black;
+  border-radius: 20px;
+  background-color: #e3d6b8;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+  animation: slideUp 1.6s ease;
+}
+
+.btn:hover {
+  background-color: #d4c29a;
+  transform: scale(1.08);
+}
+
+/* klik effect */
+.btn:active {
+  transform: scale(0.95);
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a href="#">UTAMA</a>
+    <a href="topik.html">PENJELAJAHAN</a>
+  </div>
+
+  <!-- MAIN -->
+  <div class="container">
+
+    <!-- JUDUL -->
+    <div class="title-box">
+
+      <h1>Selamat Datang!</h1>
+    </div>
+
+    <!-- ISI -->
+    <div class="content-box">
+      <p>
+        Selamat datang di website kami, dan terima kasih telah berkunjung! Website ini dibuat sebagai bagian dari tugas Ilmu Pengetahuan Sosial (IPS) untuk membantu mempelajari Benua Eropa secara lebih mendalam, mulai dari berbagai negara, wilayah, hingga fakta-fakta menarik yang ada di dalamnya.
+      </p>
+
+      <p>
+        Kami berharap website ini dapat memberikan informasi yang bermanfaat sekaligus menambah wawasan pembaca.
+      </p>
+
+      <p><b>Website ini disusun oleh siswa-siswi Kelas 9E SMP Khadijah:</b></p>
+
+      <ul>
+        <li>Mustofa Kamil</li>
+        <li>Efrizal Farras P.S.</li>
+        <li>Naura Putri Alia Cetta</li>
+        <li>Najwa Aurellia Rahmah</li>
+      </ul>
+    </div>
+
+    <!-- BUTTON -->
+    <button class="btn" onclick="goToTopik()">Ayo Terbang!</button>
+
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    function goToTopik() {
+      window.location.href = "topik.html";
+    }
+  </script>
+
+</body>
+</html>
